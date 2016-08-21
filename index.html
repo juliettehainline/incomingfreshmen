@@ -1,0 +1,458 @@
+<!--Adapting from Euirim Choi's feature code  -->
+<!--All additional code added by Juliette Hainline -->
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>The Boys&#39; Club</title>
+
+
+        <link rel="apple-touch-icon" sizes="180x180" href="http://maroon-prod.s3.amazonaws.com/static/favicons/apple-touch-icon.png">
+        <link rel="icon" type="image/png" href="http://maroon-prod.s3.amazonaws.com/static/favicons/favicon-32x32.png" sizes="32x32">
+        <link rel="icon" type="image/png" href="http://maroon-prod.s3.amazonaws.com/static/favicons/favicon-194x194.png" sizes="194x194">
+        <link rel="icon" type="image/png" href="http://maroon-prod.s3.amazonaws.com/static/favicons/android-chrome-192x192.png" sizes="192x192">
+        <link rel="icon" type="image/png" href="http://maroon-prod.s3.amazonaws.com/static/favicons/favicon-16x16.png" sizes="16x16">
+        <link rel="manifest" href="http://maroon-prod.s3.amazonaws.com/static/favicons/manifest.json">
+        <link rel="mask-icon" href="http://maroon-prod.s3.amazonaws.com/static/favicons/safari-pinned-tab.svg" color="#5bbdd9">
+        <meta name="msapplication-TileColor" content="#2b5797">
+        <meta name="msapplication-TileImage" content="http://maroon-prod.s3.amazonaws.com/static/favicons/mstile-144x144.png">
+        <meta name="theme-color" content="#ffffff">
+
+        <link href="http://maroon-prod.s3.amazonaws.com/static/css/bootstrap.css?1471812538" rel="stylesheet">
+        <link href="http://maroon-prod.s3.amazonaws.com/static/css/main.css?1471812538" rel="stylesheet">
+        <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.3/jquery-ui.min.js"></script>
+        <script src="http://maroon-prod.s3.amazonaws.com/static/js/bootstrap.min.js?1471812538"></script>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+        <link rel="stylesheet" type="text/css" href="https://cloud.typography.com/7250934/7584152/css/fonts.css" />
+
+
+<meta property="og:url" content="/article/2016/6/2/slug-automatically-generated/"/>
+<meta property="og:type" content="website"/>
+<meta property="og:title" content="The Boys&#39; Club"/>
+<meta property="og:description" content="“In the physics department, there are just as many professors named ‘David’ as there are female professors.&quot;"/>
+<meta property="og:image" content="" />
+
+    </head>
+    <body>
+
+        <script>
+
+            $(window).scroll(function(){
+                if($(window).scrollTop() >= 75){
+                    $('.navbar').addClass('navbar-shadow');
+                }
+                else{
+                    $('.navbar').removeClass('navbar-shadow');
+                }
+            });
+
+            $(document).ready(function() {
+                $("#search-trigger").click(function() {
+                    $("#search-trigger").remove();
+                    $("#search-form").removeClass("invisible");
+                    $("#viewpoints-left").addClass("invisible");
+                    $("#right-nav ul").prepend("<li><a href='/viewpoints'><small>VIEWPOINTS</small></a></li>");
+                    $("#news-left").css("margin-left", "-20px");
+                    if($(window).width() <  1024){
+                        $("#brand").remove();
+                    }
+                });
+            });
+        </script>
+
+<script>
+    $(document).ready(function() {
+        var winheight = $(window).height().toString();
+        $(".feature-img-fill").css("height", winheight);
+    });
+</script>
+
+        <nav class="navbar navbar-default navbar-fixed-top">
+            <div class = "container-fluid">
+                <!-- Brand and toggle get grouped for better mobile display -->
+                <div class="navbar-header">
+                  <button type="button" class="navbar-toggle collapsed"
+                      data-toggle="collapse" data-target="#right-nav" aria-expanded="false">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                  </button>
+                    <a id="brand" href="/"><img src = "http://maroon-prod.s3.amazonaws.com/static/img/logo_sm-01.png" width = 200/></a>
+                </div><!-- Navbar header-->
+                <!-- Collect the nav links, forms, and other content for toggling -->
+
+                <div class="collapse navbar-collapse navbar-left">
+                   <form class="navbar-form navbar-left invisible" role="search"
+                        method="GET" action="/search/" id="search-form">
+                        <div class="input-group">
+                            <input type="text" class="form-control"
+                            placeholder="SEARCH" name="query"/>
+                            <span class="input-group-btn">
+                                <button class="btn btn-default" type="submit"><small><i class="fa fa-search"></i></small></button>
+                            </span>
+                        </div>
+                    </form>
+                    <form class="navbar-left navbar-form">
+                    <button class="btn btn-default" id="search-trigger"
+                        type="button">
+                        <small><i class="fa fa-search"></i></small>
+                    </button>
+                    </form>
+                    <div class = "navbar-collapse navbar-right"
+                        id="left-nav">
+                      <ul class="nav navbar-nav">
+                          <li id="news-left"><a href="/news"><small>NEWS</small></a></li>
+                          <li id="viewpoints-left"><a href="/viewpoints"><small>VIEWPOINTS</small></a></li>
+                      </ul>
+                    </div>
+
+<!--
+                <ul class = "nav navbar-nav">
+                      <li><a href="#"><small><i class = "fa fa-laptop"></i> &nbsp;Subscribe</small></a></li>
+                  </ul>
+-->
+                </div><!-- /.navbar-collapse -->
+
+
+                <div class = "collapse navbar-collapse navbar-right" id="right-nav">
+                  <ul class="nav navbar-nav">
+                      <li id="news-left" class="visible-xs"><a href="/news"><small>NEWS</small></a></li>
+                      <li id="viewpoints-left" class="visible-xs"><a href="/viewpoints"><small>VIEWPOINTS</small></a></li>
+                      <li><a href="/sports"><small>SPORTS</small></a></li>
+                      <li><a href="/arts"><small>ARTS</small></a></li>
+                      <li><a href="/greycity"><small>GREY CITY</small></a></li>
+                  </ul>
+                  <a id="brand-search" class="invisible" href="/"><img src = "http://maroon-prod.s3.amazonaws.com/static/img/logo_lg.png" width = 200/></a>
+                </div>
+
+            </div>
+        </nav>
+
+<div id="feature-img-fill-wrapper">
+    <div class="feature-img-fill"
+        style="background-color:#b81c32;"
+        >
+        <div class="feature-img-gradient">
+                <div class="feature-img-fill-content">
+                    <div class="row">
+                        <div class="col-xs-10 col-xs-offset-1 col-sm-8 col-sm-offset-2">
+                            <h1 class="media-heading">The Boys&#39; Club</h1>
+                            <h4 class="serif">“In the physics department, there are just as many professors named ‘David’ as there are female professors.&quot;</h4>
+                            <div class="divider"></div>
+        <h4 class = "text-white">
+                <span class = "sans-serif blurb-author">
+                    By
+                    <span class = ""><a href = "/contributor/wendy-lee/" class = "plain-link"><strong>Wendy Lee</strong></a></span>
+                </span>
+        </h4>
+
+                        </div>
+                    </div>
+                </div>
+        </div>
+    </div>
+</div>
+
+        <div class = "container" id = "container-main">
+
+
+
+<!-- Load Facebook SDK for JavaScript -->
+<div class = "row" style="margin-top:-35px;">
+    <div class = "col-md-offset-1 col-md-10 col-sm-12">
+        <div class = "row">
+            <div class = "col-sm-8">
+                <p class = "text-muted zero-margin" style="margin-top:0px;"></p>
+            </div>
+        </div>
+    </div>
+    <div class = "col-sm-12"><div class = "h-line divider"></div></div>
+    <div class = "col-md-offset-1 col-md-10 col-sm-12">
+        <div class = "row">
+            <div class = "col-sm-8 col-xs-6">
+                <h5 class = "section-header inline">GREY CITY</h5>
+                <p class = "inline">&nbsp;&nbsp;/&nbsp;&nbsp;</p>
+
+                <h5 class = "section-header inline FEATURE"><span
+                        class="label label-danger">FEATURE</span></h5>
+                <p class = "inline">&nbsp;&nbsp;/&nbsp;&nbsp;</p>
+
+                <p class = "inline sans-serif text-danger">June 2, 2016</p>
+           </div>
+            <div class = "col-sm-4 col-xs-6">
+                <h5 class = "text-right big-icon">
+                    <a href="https://www.facebook.com/sharer/sharer.php?u=/article/2016/6/2/slug-automatically-generated/&title=The Boys&#39; Club">
+                        <i class = "fa fa-facebook-square"></i>
+                    </a>
+                    <a
+                        href="http://twitter.com/intent/tweet?status=The Boys&#39; Club+/article/2016/6/2/slug-automatically-generated/">
+                        <i class = "fa fa-twitter-square"></i>
+                    </a>
+                    <a
+                        href="http://www.linkedin.com/shareArticle?mini=true&url=/article/2016/6/2/slug-automatically-generated/&title=The Boys&#39; Club&source=http://www.chicagomaroon.com">
+                        <i class = "fa fa-linkedin-square"></i>
+                    </a>
+                </h5>
+            </div>
+        </div>
+    </div>
+   <div class = "col-sm-12"><div class = "h-line divider"></div></div>
+    <div class = "col-md-offset-1 col-md-10 col-sm-12">
+        <div class = "row">
+            <div class = "col-sm-8 col-sm-offset-2 article-content">
+                <p style="text-align:left"><em>&ldquo;Many STEM disciplines are still a boys&rsquo; club, and if people keep pointing to men as examples of success, it&rsquo;s hard to imagine yourself being in that field. There is definitely still a gender imbalance, but even though that gender imbalance may be conducive to certain biases and&nbsp;behaviors&nbsp;going unchecked, it&rsquo;s definitely my hope that, in our&nbsp;case, we have lessened this effect to some extent.&rdquo;</em></p>
+
+<p style="text-align:left"><em>&mdash;Borja Sotomayor,&nbsp;</em><em>Senior Lecturer in the Department of Computer Science</em></p>
+
+<p>Last November, the University received reports that Jason Lieb, Ph.D., a professor in the Department of Human Genetics, had engaged in &ldquo;inappropriate behavior&rdquo; during a private party at an off-campus retreat organized by the Department of Molecular Biosciences (DMB). According to a University investigation letter obtained by<em> The New York Times</em>, Lieb engaged in sexual activity with a student who was unable to consent because she was incapacitated and under the influence of alcohol.</p>
+
+<p>One of the graduate students at the retreat, who spoke on the condition of anonymity, said that there was a coordinated effort at the party to try to help the female graduate students. Various individuals at the party moved in to &ldquo;help [Lieb&rsquo;s] targets get away from him&rdquo; or tried to convince Lieb to leave the party for both his own sake and for the sake of his victims. For her, the incident was a testament to how important it is for faculty members to recognize that they benefit from being in a position of power; or, more importantly, how crucial it is for them to not stand by and perpetuate the status quo.</p>
+
+<p>&ldquo;Like many of the women [at the party], I got hit on and grabbed at by Jason Lieb. I think that party taught us a lot about what it&rsquo;s actually like; being in a position where we were vulnerable, inferior graduate students observing something that we could tell was clearly wrong, but kind of being unsure how to approach the situation because someone who had superiority over us was taking advantage of his position of power,&rdquo; the graduate student said.</p>
+
+<p>After the University&rsquo;s Title IX Coordinator Sarah Wake was notified, she began to investigate the allegations, and Lieb went on a leave of absence and remained so throughout the entire investigation process. In January, Wake concluded that Lieb had violated the University&rsquo;s Policy on Harassment, Discrimination, and Sexual Misconduct, and she reported her findings to the Dean of the Biological Sciences Division (BSD), Kenneth Polonsky, and to Provost Eric D. Isaacs, and recommended Lieb&rsquo;s termination. Both Polonsky and Isaacs agreed with her recommendation, and on January 21, Lieb resigned before the disciplinary process was complete.</p>
+
+<p>In an official statement on February 3, the University condemned Lieb&rsquo;s behavior, stating that &ldquo;sexual harassment and sexual misconduct are forms of sex discrimination that violate the standards of our community and will not be tolerated by the University of Chicago.&rdquo; Victoria Prince, Ph.D., dean of graduate affairs, additionally e-mailed students in the DMB to assure them that they &ldquo;have full access to the support [they] may need, especially at this difficult time.&rdquo;</p>
+
+<p>In direct response to the incident, the University stated that it plans to provide increased training on &ldquo;related issues&rdquo; to faculty members, graduate students, undergraduates, and staff members in an effort to prevent future incidences of sexual misconduct. According to Karen Warren Coleman, vice president for campus life and student services, this &ldquo;training&rdquo; is intended to better educate everyone on the University&rsquo;s Title IX policy. The University has additionally begun interviewing applicants to fill the role of Deputy Title IX Coordinator, who will be responsible for assisting Wake with the implementation of Title IX programs.</p>
+
+<p>The University&rsquo;s Title IX policy prohibits discrimination on the basis of sex in education programs or activities. Sexual harassment of students, which includes acts of sexual violence, is a form of sex discrimination prohibited by Title IX. The policy defines harassment as &ldquo;verbal or physical conduct [&hellip;] that [has] the purpose or effect of unreasonably interfering with an individual&rsquo;s work performance or educational program participation, or that creates an intimidating, hostile, or offensive work or educational environment.&rdquo; The policy goes on to state that &ldquo;harassment by a faculty member, instructor, or teaching assistant of a student over whom the individual has authority, or by a supervisor of a subordinate, is particularly serious.&rdquo;</p>
+
+<p>This year, in another effort to better respond to cases of sexual misconduct, the University launched a site for UMatter, a program that provides individuals with information and resources about gender-based misconduct and about the University&rsquo;s conflict resolution process. Second-year Meg Dowd, co-leader of Phoenix Survivors Alliance (PSA), spoke favorably of both the new UMatter site and of the University&rsquo;s response to the Lieb incident, stating that it was good that Wake called for Lieb&rsquo;s removal. PSA is a student-led organization that works to provide information, advocacy, and peer support to survivors of sexual violence.</p>
+
+<p>&ldquo;[Wake and PSA] seem to be working toward the same goals. The new UMatter site is a helpful resource; however, the amount of publicity and exposure that UMatter gets is not enough, especially within STEM fields, where women are such a small minority. It&rsquo;s important to make sure this information is prevalent and out there,&rdquo; Dowd said.</p>
+
+<p>According to 2015 enrollment data, women made up 45 percent of the BSD&rsquo;s graduate division and 26 percent of the Physical Sciences Division (PSD)&rsquo;s graduate division. Peggy Mason, Ph.D., of the Department of Neurobiology, echoed Dowd&rsquo;s statement, saying that the fact that the University even hired Wake as Title IX Coordinator was an indication that the University was addressing the issue of sex-based discrimination on campus.</p>
+
+<p>&ldquo;[The administration] hired her, empowered her, and took her recommendation. They didn&rsquo;t hire her out of the blue; they didn&rsquo;t hire her for show. They made a good hire, and it was a genuine hire. It was completely sincere,&rdquo; Mason said.</p>
+
+<p>Wake replaced Belinda Vasquez in February as Title IX Coordinator for the University. During Vasquez&rsquo;s tenure as Coordinator, the U.S. Department of Education&rsquo;s Office of Civil Rights (OCR) launched a campus-wide investigation into the University&rsquo;s potential breach of Title IX after student Olivia Ortiz filed a complaint. Ortiz claimed that the University had mishandled disciplinary procedures after she was sexually assaulted by her then-partner over the course of the 2011&ndash;2012 academic year. Two new investigations were launched this year to address other possible mishandlings of sexual violence and harassment complaints.</p>
+
+<p>&ldquo;Meetings with Vasquez revealed that she had a poor grasp of the law in addition to often times being antagonistic toward students,&rdquo; Dowd said.</p>
+
+<p>The University has been commended for its handling of the Lieb incident, but criticized for hiring Lieb in the first place. Fourth-year Victoria Norman, co-president of the Society of Women in Physics (SWiP) and vice president of Women in Science (WIS), was disturbed by the fact that the University doesn&rsquo;t have any explicity universal policies against hiring faculty with a history of sexual misconduct. The University hiring process is highly decentralized, leaving much discretion to individual departments.</p>
+
+<p>Before joining the Department of Human Genetics, faculty members in the molecular biology department received e-mails from an anonymous address stating that Lieb had faced allegations of sexual misconduct at Princeton University and the University of North Carolina at Chapel Hill (UNC). From 2002 to 2013, Lieb taught at UNC, where a complaint was filed against him for unwanted contact. After a brief stint at Princeton as a professor of molecular biology from 2013 to 2014, Lieb was hired by the University of Chicago following the resignation of two prominent faculty members in the BSD. After failing to find any sexual harassment investigations into Lieb&rsquo;s conduct while he was at Princeton, a University committee of faculty and administrators unanimously voted to hire Lieb.</p>
+
+<p>In addition to putting the spotlight on sexual assault issues, the Lieb case, and several others like it, has started a conversation about how difficult it is for institutions to penalize individuals for having implicit and unconscious biases, especially considering how hard these biases are to detect, define, and deter. For Borja Sotomayor, Ph.D., of the Department of Computer Science, implicit bias becomes actionable offense the moment someone refuses to acknowledge and learn from their mistake.</p>
+
+<p>&ldquo;We [those in tech communities who want to create a welcoming environment for women and minorities] shouldn&rsquo;t go after people if they are willing to consider that they have a set of unconscious biases that are causing a negative effect, and have an open mind to accepting feedback on how those biases could be mitigated,&rdquo; Sotomayor said.</p>
+
+<p><strong>Institutional Problems</strong></p>
+
+<p>Similar to its peer institutions, the University has continually suffered from a gender imbalance in its STEM departments for decades. In 2015, 26 percent of the College&rsquo;s PSD, which consists of the Departments of Astronomy and Astrophysics, Chemistry, Computer Science, Geophysical Sciences, Mathematics, Physics, and Statistics, was comprised of women. This is slightly lower than the national average four years ago, which, according to the National Academies of Sciences, Engineering, and Medicine, was 29 percent.</p>
+
+<p>In 2015, the American Physical Society (APS) found that, since 1965, the percentage of bachelor&rsquo;s degrees earned by women in various math and science fields has steadily increased. This increase is particularly evident in the biological sciences, where, in 2015, there were more women with bachelor&rsquo;s degrees in biology than men. Women, however, continue to be vastly underrepresented in the disciplines of physics and engineering, and the percentage of bachelor&rsquo;s degrees earned by the women in these majors has failed to progress at the scale and rapidity of biology, chemistry, and mathematics.</p>
+
+<p><iframe align="left" frameborder="0" height="650" scrolling="no" src="https://plot.ly/~juliettehainline/15.embed?link=false" width="100%"></iframe></p>
+
+<p>The circumstances surrounding Lieb&rsquo;s recent resignation have also served as a reminder to both faculty members and students of the connection between unconscious biases and actionable offenses of sexual violence. While STEM departments are always eager to hire more female faculty members, increasing the number of women in the field wouldn&rsquo;t necessarily discourage discriminatory practices or eliminate misogynistic behavior. Sotomayor described the gender disparity issue as a chicken-or-the-egg problem: how can you hire more women in STEM disciplines when there aren&rsquo;t any women to hire in the first place?</p>
+
+<p>&ldquo;A lot of women and minorities look at the tech industry, and it comes across as a boys&rsquo; club, which is something we should theoretically be able to change. It&rsquo;s easy to say &lsquo;Let&rsquo;s just hire more women!&rsquo;, but sometimes, you walk into a group where you&rsquo;re the only woman in a team comprised entirely of men, and even if they aren&rsquo;t actively doing anything to you, it can still feel like you&rsquo;re out of place,&rdquo; Sotomayor said.</p>
+
+<p>The issue of gender imbalance hits close to home for the Department of Mathematics, which has struggled to recruit female faculty members for decades. When Shmuel Weinberger, Ph.D., chair of the Department of Mathematics, first came to the University in 1984, the department had one female tenured faculty member. After he left in 1986, the department had no other female tenured faculty until 2005. Weinberger said that it&rsquo;s difficult to combat, or even measure, the market-based biases against women in STEM fields.</p>
+
+<p>&ldquo;We are aware of the gender imbalance problem, and we do what we can to encourage people to apply. However, with the way society is structured, it is probably harder for women to stay in the field because tenure is often decided at around the time that people are starting families. In our culture, that responsibility falls substantially on women; thus, it&rsquo;s a systemic problem. These are enormous social problems that can&rsquo;t be solved by an individual,&rdquo; Weinberger said.</p>
+
+<p>The &ldquo;leaky pipeline&rdquo; metaphor is used to describe how women drop out of STEM disciplines at all stages of their careers, often due to either overt or implicit discrimination. In order to combat the this phenomenon in their respective fields, Sotomayor and Weinberger have been working to create environments that are more welcoming and accommodating to women and minorities.</p>
+
+<p>One of the ways the Department of Computer Science has been trying to fix the pipeline is by supporting committees and clubs run entirely by women, such as ACM-W, the Association for Computing Machinery Committee on Women, or FEMMES UChicago, a student-led organization that is working to close the technology gender gap by hosting computer science workshops and coding camps for middle school girls.</p>
+
+<p>While it has been challenging for the Department of Computer Science to get more women involved in computing, Sotomayor said that the numbers speak for themselves. Women comprise twenty eight percent of the department, well above the national average. He said that this number has been increasing steadily.</p>
+
+<p>&ldquo;There are a lot of small things you can do, such as gender-balanced panels. ACM-W is planning on organizing a hackathon just for women next year, and they aren&rsquo;t doing it to exclude other people. Rather, they are doing it to enable a group that has traditionally been underrepresented, and even shunned from the field, to explore their potential with the absence of biases and pressures,&rdquo; Sotomayor said.</p>
+
+<p>The Department of Mathematics sponsors similar events through the Association of Women in Mathematics, an organization that aims to increase the visibility of women in mathematics through speaker events and mentoring programs. While it is difficult to solve some of the systemic challenges associated with the gender imbalance in STEM, Weinberger said he hopes his department promotes an atmosphere of intolerance for harassment and intimidation.</p>
+
+<p>&ldquo;It feels like things are getting better. There might still be some unconscious biases, or even biases about the nature of the profession that discourage women. However, when we become aware of a bias, we try to combat it. We&rsquo;re currently a department of 28 tenured faculty with three women, but I imagine that with time, that number will get larger,&rdquo; Weinberger said.</p>
+
+<p>The University&rsquo;s swift response to the allegations against Lieb reflects a renewed hardline stance against sexual assault, especially considering Lieb&rsquo;s reputation as a well-known and academically distinguished faculty member. According to ResearchGate, Lieb has 221 publications that have been read over 7,000 times and cited 16,000 times. His publications indicate that he is the recipient of around $1.2 million in federal grants from the National Institute of Health (NIH).</p>
+
+<p>The University, however, may still be receiving funds for the projects that Lieb had previously worked on. Although all NIH-supported investigators, students, fellows, postdocs, and research participants are protected by federal civil rights laws that strictly prohibit discrimination on the basis of sex, the NIH is not required to penalize grantees. Even if Lieb was found to have violated federal laws or institutional policies, grant money could continue to support any projects previously affiliated with him because funding awards are made out to institutions and not individuals.</p>
+
+<p><strong>The Future for Women in STEM</strong></p>
+
+<p>When Angela Olinto, Ph.D., first joined the University&rsquo;s Department of Astronomy and Astrophysics in 1990, she was the first female hire in the department&rsquo;s history. Since becoming the department chair in 2012, Olinto has brought in three more female faculty members, a remarkable feat considering the department&rsquo;s historically disproportionate male-to-female ratio. As she reflected on her career, which spans over three decades, she was relentlessly positive, noting that the very fact that people are even talking about the significant gender disparities in STEM is a huge victory for everyone involved.</p>
+
+<p>&ldquo;In the &rsquo;60s, women were not allowed to use big telescopes, but now, women are the ones building the biggest telescopes. When I was in graduate school, talking about this issue was not even part of the conversation, but now, everybody talks about it. It&rsquo;s good that people are trying to fix it as well as they can, but it will take time,&rdquo; Olinto said.</p>
+
+<p>Olinto said that the Lieb incident presents an opportunity for students and faculty to engage in a meaningful conversation about the environmental factors that contribute to harmful and misogynistic behavior.</p>
+
+<p>&ldquo;We are ready for more progress, and it can only happen if we use these scandals as a way to have a greater conversation. The next generation of men and women should be aware of the positives of having a diverse culture. They should know not to assume that everybody has the same first-order reaction to questions and problems,&rdquo; Olinto said.</p>
+
+<p>University president Robert Zimmer said that the University&rsquo;s prompt response to the incident was an indication that it was initiating conversations about taking sexual misconduct more seriously.</p>
+
+<p>&ldquo;Ultimately, there is a kind of cultural awareness and intention to what is and isn&rsquo;t acceptable behavior. I think getting that all clarified and [into the] open discourse is an important part of what we&rsquo;re trying to do,&rdquo; Zimmer said in a meeting with The Maroon earlier in the quarter.</p>
+
+<p>Since its conception, the University has placed heavy emphasis on its dedication to academia, open discourse, and the life of the mind. Discussions about sexual misconduct have arguably not been as simple or transparent. Norman expressed concern over the limitations of such discourse, especially for victims of gender-based discrimination.</p>
+
+<p>&ldquo;I&rsquo;ve been informally polling people at WIS and SWiP events, and I found that a majority of people wouldn&rsquo;t even know who to contact if they experienced gender-based discrimination in labs or classrooms. Yes, you can file an online report at UMatter, but what if you just wanted to talk to someone? What if someone is making women uncomfortable with certain jokes or comments? For women and racial minorities, a lot of these problems get ignored and internalized because they have no outlet,&rdquo; Norman said.</p>
+
+<p>Leslie Rogers, Ph.D., of the Department of Astronomy and Astrophysics agreed with this sentiment, adding that minority women are often excluded from conversations about gender disparities and sexual misconduct.</p>
+
+<p>&ldquo;The fractional representation of white women in STEM disciplines has improved over time, but underrepresented minorities are vastly underrepresented in my field. Realizing that we all harbor these unconscious biases is the first step towards minimizing and reducing bias,&rdquo; Rogers said.</p>
+
+<p>While it is often easy to place the blame on the majority&mdash;whether it&rsquo;s the men who voted to hire Lieb, or the men in the STEM industry&mdash;both Norman and Rogers said that women have just as much bias as men, and thus, have just as much responsibility in creating change.</p>
+
+<p>&ldquo;There is a lot of internalized misogyny in the field amongst women. There are unfortunately several female professors who don&rsquo;t think women have to try as hard anymore because there is now such a push to have more women in STEM. The University needs to actively work to retain more women in STEM disciplines and to give more administrative support to groups like Women in Science,&rdquo; Norman said.</p>
+
+<p>While there is certainly a long way to go until absolute gender equality, Rogers said she is optimistic about the future for women in the STEM fields at the University because there is so much awareness surrounding the issue.</p>
+
+<p>&ldquo;Overall, people are becoming more conscious of these subtle biases and becoming less tolerant of explicit sexual harassment in the academic community. I&rsquo;m certainly inspired by the senior women in my department, and I hope I can help to mentor the next generation of women, as well,&rdquo; Rogers said.</p>
+
+<p>Norman envisions a future where women have more power to improve their institutions.</p>
+
+<p>&ldquo;In the physics department, there are just as many professors named &lsquo;David&rsquo; as there are female professors. Let&rsquo;s change that.&rdquo;</p>
+
+
+
+                <div class = "d-line divider"></div>
+
+                <div id="disqus_thread"></div>
+                <script>
+                /**
+                * RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+                * LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables
+                */
+                /*
+                var disqus_config = function () {
+                    this.page.url = /article/2016/6/2/slug-automatically-generated/; // Replace PAGE_URL with your page's canonical URL variable
+                    this.page.identifier = 20435; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+                };
+                */
+                (function() { // DON'T EDIT BELOW THIS LINE
+                var d = document, s = d.createElement('script');
+
+                s.src = '//bourassa.disqus.com/embed.js';
+
+                s.setAttribute('data-timestamp', +new Date());
+                (d.head || d.body).appendChild(s);
+                })();
+                </script>
+                <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+
+            </div>
+        </div>
+    </div>
+</div>
+<script id="dsq-count-scr" src="//bourassa.disqus.com/count.js" async></script>
+<script>
+function asyncImgLoad(url) {
+    alert("hello!");
+    this.style.backgroundImage = "url('" + url + "')";
+}
+</script>
+
+            <!-- footer -->
+            <div class = "footer">
+                <div class = "d-line divider"></div>
+                <div class = "row flex">
+                    <div class="col-sm-3 col-xs-6">
+                        <br/>
+                        <img src="http://maroon-prod.s3.amazonaws.com/static/img/logo_sm-01.png"
+                        class="img-responsive"/> <p class="serif
+                            text-muted">The
+                            independent student newspaper of The University of
+                                Chicago since 1892.</p>
+                    </div>
+                    <div class="col-sm-3 col-xs-6">
+                        <ul class="footer-list">
+                            <li><h5 class="topic-header">SECTIONS</h5></li>
+                            <li>
+                            <small><a class="sans-serif" href="/news">NEWS</a></small>
+                            </li>
+                            <li>
+                                <small><a class="sans-serif" href="/viewpoints">VIEWPOINTS</a></small>
+                            </li>
+                            <li>
+                                <small><a class="sans-serif" href="/sports">SPORTS</a></small>
+                            </li>
+                            <li>
+                                <small><a class="sans-serif" href="/arts">ARTS</a></small>
+                            </li>
+                            <li>
+                                <small><a class="sans-serif"
+                                        href="/greycity">GREY CITY</a></small>
+                            </li>
+                            <li>
+                                <small><a class="sans-serif"
+                                        href="/features">FEATURES</a></small>
+                            </li>
+
+                        </ul>
+                    </div>
+                    <div class="col-sm-3 section-border col-xs-6">
+                        <ul class="footer-list">
+
+                            <li><h5 class="topic-header">ABOUT</h5></li>
+
+                            <li>
+                            <small><a class="sans-serif"
+                                        href="/pages/staff/">STAFF</a></small>
+                            </li>
+
+                            <li>
+                            <small><a class="sans-serif"
+                                        href="/pages/advertise/">ADVERTISE</a></small>
+                            </li>
+
+                            <li>
+                            <small><a class="sans-serif"
+                                        href="/pages/legal/">LEGAL</a></small>
+                            </li>
+
+                            <li>
+                            <small><a class="sans-serif"
+                                        href="/pages/policies/">POLICIES</a></small>
+                            </li>
+
+
+                        </ul>
+                    </div>
+                    <div class="col-sm-3 col-xs-6">
+                        <ul class="footer-list">
+
+                            <li><h5 class="topic-header">CONTACT</h5></li>
+
+                            <li>
+                            <small><a class="sans-serif" href="/pages/apply/">
+                                    APPLY</a></small>
+                            </li>
+
+                            <li>
+                            <small><a class="sans-serif" href="/pages/subissions/">
+                                    SUBMISSIONS</a></small>
+                            </li>
+
+                            <li>
+                            <small><a class="sans-serif" href="/pages/subscribe/">
+                                    SUBSCRIBE</a></small>
+                            </li>
+
+                            <li>
+                            <small><a class="sans-serif" href="/pages/corrections/">
+                                    CORRECTIONS</a></small>
+                            </li>
+
+                            <li>
+                            <small><a class="sans-serif" href="/pages/donate/">
+                                    DONATE</a></small>
+                            </li>
+
+
+                        </ul>
+                    </div>
+                </div>
+                <div class="divider h-line"></div>
+                <p class = "sans-serif text-muted">&copy; 2016 The Chicago Maroon. Designed & built by Euirim Choi '19.</p>
+            </div>
+        </div>
+
+    </body>
+</html>
